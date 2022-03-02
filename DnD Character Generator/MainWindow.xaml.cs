@@ -24,5 +24,10 @@ namespace DnD_Character_Generator
         {
             InitializeComponent();
         }
+
+        private void Class_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

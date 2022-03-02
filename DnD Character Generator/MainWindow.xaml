@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="Randomizer" Content="Random Character" HorizontalAlignment="Left" Margin="673,19,0,0" VerticalAlignment="Top"/>
+        <Label Content="Class: " HorizontalAlignment="Left" Margin="31,29,0,0" VerticalAlignment="Top"/>
+        <Label Content="Race: " HorizontalAlignment="Left" Margin="31,72,0,0" VerticalAlignment="Top"/>
+        <Label Content="Strength: " HorizontalAlignment="Left" Margin="31,179,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dexterity: " HorizontalAlignment="Left" Margin="31,210,0,0" VerticalAlignment="Top"/>
+        <Label Content="Constitution: " HorizontalAlignment="Left" Margin="31,241,0,0" VerticalAlignment="Top"/>
+        <Label Content="Intelligence: " HorizontalAlignment="Left" Margin="31,272,0,0" VerticalAlignment="Top"/>
+        <Label Content="Wisdom: " HorizontalAlignment="Left" Margin="31,303,0,0" VerticalAlignment="Top"/>
+        <Label Content="Charisma: " HorizontalAlignment="Left" Margin="31,334,0,0" VerticalAlignment="Top"/>
+        <Label Content="Hit Point Maximum: " HorizontalAlignment="Left" Margin="426,72,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Hit_Die" Content="Roll Hit Die" HorizontalAlignment="Left" Margin="587,75,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Ability_Dice" Content="Roll Ability Dice" HorizontalAlignment="Left" Margin="31,139,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="111,31,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="111,74,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Strength" Content="0" HorizontalAlignment="Left" Margin="126,179,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Dexterity" Content="0" HorizontalAlignment="Left" Margin="126,210,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Constitution" Content="0" HorizontalAlignment="Left" Margin="126,241,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Intelligence" Content="0" HorizontalAlignment="Left" Margin="126,272,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Wisdom" Content="0" HorizontalAlignment="Left" Margin="126,303,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Charisma" Content="0" HorizontalAlignment="Left" Margin="126,334,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
