@@ -6,7 +6,7 @@ namespace DnD_Character_Generator
 {
     class Character
     {
-
+        //interface
 
     }
 }
