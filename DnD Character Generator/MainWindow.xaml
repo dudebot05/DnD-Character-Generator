@@ -28,19 +28,19 @@
         <Label x:Name="Intelligence" Content="0" HorizontalAlignment="Left" Margin="126,316,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Wisdom" Content="0" HorizontalAlignment="Left" Margin="126,347,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Charisma" Content="0" HorizontalAlignment="Left" Margin="126,378,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Score1" Content="0" HorizontalAlignment="Left" Margin="150,180,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Score2" Content="0" HorizontalAlignment="Left" Margin="200,180,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Score3" Content="0" HorizontalAlignment="Left" Margin="250,180,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Score4" Content="0" HorizontalAlignment="Left" Margin="300,180,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Score5" Content="0" HorizontalAlignment="Left" Margin="350,180,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Score6" Content="0" HorizontalAlignment="Left" Margin="400,180,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="RandomAbiliities" Content="Random" HorizontalAlignment="Left" Margin="465,183,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="ScoreChoice1" HorizontalAlignment="Left" Margin="142,153,0,0" VerticalAlignment="Top" Width="32" IsEnabled="False"/>
-        <ComboBox x:Name="ScoreChoice2" HorizontalAlignment="Left" Margin="192,153,0,0" VerticalAlignment="Top" Width="32" IsEnabled="False"/>
-        <ComboBox x:Name="ScoreChoice3" HorizontalAlignment="Left" Margin="242,153,0,0" VerticalAlignment="Top" Width="32" IsEnabled="False"/>
-        <ComboBox x:Name="ScoreChoice4" HorizontalAlignment="Left" Margin="292,153,0,0" VerticalAlignment="Top" Width="32" IsEnabled="False"/>
-        <ComboBox x:Name="ScoreChoice5" HorizontalAlignment="Left" Margin="342,153,0,0" VerticalAlignment="Top" Width="32" IsEnabled="False"/>
-        <ComboBox x:Name="ScoreChoice6" HorizontalAlignment="Left" Margin="392,153,0,0" VerticalAlignment="Top" Width="32" IsEnabled="False"/>
+        <Label x:Name="Score1" Content="0" HorizontalAlignment="Left" Margin="160,180,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Score2" Content="0" HorizontalAlignment="Left" Margin="230,180,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Score3" Content="0" HorizontalAlignment="Left" Margin="300,180,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Score4" Content="0" HorizontalAlignment="Left" Margin="370,180,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Score5" Content="0" HorizontalAlignment="Left" Margin="440,180,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Score6" Content="0" HorizontalAlignment="Left" Margin="510,180,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="RandomAbiliities" Content="Random" HorizontalAlignment="Left" Margin="594,183,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="ScoreChoice1" HorizontalAlignment="Left" Margin="142,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice1_SelectionChanged"/>
+        <ComboBox x:Name="ScoreChoice2" HorizontalAlignment="Left" Margin="212,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice2_SelectionChanged"/>
+        <ComboBox x:Name="ScoreChoice3" HorizontalAlignment="Left" Margin="282,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice3_SelectionChanged"/>
+        <ComboBox x:Name="ScoreChoice4" HorizontalAlignment="Left" Margin="352,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice4_SelectionChanged"/>
+        <ComboBox x:Name="ScoreChoice5" HorizontalAlignment="Left" Margin="422,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice5_SelectionChanged"/>
+        <ComboBox x:Name="ScoreChoice6" HorizontalAlignment="Left" Margin="492,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice6_SelectionChanged"/>
 
     </Grid>
 </Window>

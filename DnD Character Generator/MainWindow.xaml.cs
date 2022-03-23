@@ -19,8 +19,6 @@ namespace DnD_Character_Generator
     public partial class MainWindow : Window
     {
         //Initialize necessary variables
-        Random abilityDice = new Random();
-        Random hitDie = new Random();
         List<string> Abilities = new List<string>
         {
             "Strength",
@@ -30,6 +28,7 @@ namespace DnD_Character_Generator
             "Wisdom",
             "Charisma"
         };
+        Dice dice;
 
         public MainWindow()
         {
@@ -41,6 +40,7 @@ namespace DnD_Character_Generator
             ScoreChoice4.ItemsSource = Abilities;
             ScoreChoice5.ItemsSource = Abilities;
             ScoreChoice6.ItemsSource = Abilities;
+            dice = new Dice(Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
         }
 
         private void Class_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -53,30 +53,10 @@ namespace DnD_Character_Generator
             //When Roll Dice is clicked, loop through 4 dice rolls six times,
             //and take the sum of the three highest values to set the scores 
             //to use for the abilities
-            int[] Scores = new int[6];
-            for (int i = 0; i < 6; i++) {
-                int num1 = abilityDice.Next(0, 6);
-                int num2 = abilityDice.Next(0, 6);
-                int num3 = abilityDice.Next(0, 6);
-                int num4 = abilityDice.Next(0, 6);
+            Ability_Dice.IsEnabled = false;
+            RandomAbiliities.IsEnabled = false;
 
-                if (num1 < num2 && num1 < num3 && num1 < num4)
-                {
-                    Scores[i] = num2 + num3 + num4;
-                }
-                else if (num2 < num1 && num2 < num3 && num2 < num4)
-                {
-                    Scores[i] = num1 + num3 + num4;
-                }
-                else if (num3 < num2 && num3 < num1 && num3 < num4)
-                {
-                    Scores[i] = num2 + num1 + num4;
-                }
-                else
-                {
-                    Scores[i] = num2 + num3 + num1;
-                }
-            }
+            int[] Scores = dice.rollAbilities();
 
             //bind the score values to the window display
             Score1.Content = Scores[0];
@@ -92,6 +72,126 @@ namespace DnD_Character_Generator
             ScoreChoice4.IsEnabled = true;
             ScoreChoice5.IsEnabled = true;
             ScoreChoice6.IsEnabled = true;
+        }
+
+        private void ScoreChoice1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ScoreChoice1.IsEnabled = false;
+            string choice = dice.setScore(ScoreChoice1, Score1);
+
+            for (int i = 0; i < Abilities.Count; i++)
+            {
+                if (Abilities[i].Equals(choice))
+                    Abilities.Remove(Abilities[i]);
+            }
+
+            ScoreChoice1.ItemsSource = Abilities;
+            ScoreChoice2.ItemsSource = Abilities;
+            ScoreChoice3.ItemsSource = Abilities;
+            ScoreChoice4.ItemsSource = Abilities;
+            ScoreChoice5.ItemsSource = Abilities;
+            ScoreChoice6.ItemsSource = Abilities;
+            Score1.Visibility = Visibility.Hidden;
+        }
+
+        private void ScoreChoice2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ScoreChoice2.IsEnabled = false;
+            string choice = dice.setScore(ScoreChoice2, Score2);
+
+            for (int i = 0; i < Abilities.Count; i++)
+            {
+                if (Abilities[i].Equals(choice))
+                    Abilities.Remove(Abilities[i]);
+            }
+
+            ScoreChoice1.ItemsSource = Abilities;
+            ScoreChoice2.ItemsSource = Abilities;
+            ScoreChoice3.ItemsSource = Abilities;
+            ScoreChoice4.ItemsSource = Abilities;
+            ScoreChoice5.ItemsSource = Abilities;
+            ScoreChoice6.ItemsSource = Abilities;
+            Score2.Visibility = Visibility.Hidden;
+        }
+
+        private void ScoreChoice3_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ScoreChoice3.IsEnabled = false;
+            string choice = dice.setScore(ScoreChoice3, Score3);
+
+            for (int i = 0; i < Abilities.Count; i++)
+            {
+                if (Abilities[i].Equals(choice))
+                    Abilities.Remove(Abilities[i]);
+            }
+
+            ScoreChoice1.ItemsSource = Abilities;
+            ScoreChoice2.ItemsSource = Abilities;
+            ScoreChoice3.ItemsSource = Abilities;
+            ScoreChoice4.ItemsSource = Abilities;
+            ScoreChoice5.ItemsSource = Abilities;
+            ScoreChoice6.ItemsSource = Abilities;
+            Score3.Visibility = Visibility.Hidden;
+        }
+
+        private void ScoreChoice4_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ScoreChoice4.IsEnabled = false;
+            string choice = dice.setScore(ScoreChoice4, Score4);
+
+            for (int i = 0; i < Abilities.Count; i++)
+            {
+                if (Abilities[i].Equals(choice))
+                    Abilities.Remove(Abilities[i]);
+            }
+
+            ScoreChoice1.ItemsSource = Abilities;
+            ScoreChoice2.ItemsSource = Abilities;
+            ScoreChoice3.ItemsSource = Abilities;
+            ScoreChoice4.ItemsSource = Abilities;
+            ScoreChoice5.ItemsSource = Abilities;
+            ScoreChoice6.ItemsSource = Abilities;
+            Score4.Visibility = Visibility.Hidden;
+        }
+
+        private void ScoreChoice5_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ScoreChoice5.IsEnabled = false;
+            string choice = dice.setScore(ScoreChoice5, Score5);
+
+            for (int i = 0; i < Abilities.Count; i++)
+            {
+                if (Abilities[i].Equals(choice))
+                    Abilities.Remove(Abilities[i]);
+            }
+
+            ScoreChoice1.ItemsSource = Abilities;
+            ScoreChoice2.ItemsSource = Abilities;
+            ScoreChoice3.ItemsSource = Abilities;
+            ScoreChoice4.ItemsSource = Abilities;
+            ScoreChoice5.ItemsSource = Abilities;
+            ScoreChoice6.ItemsSource = Abilities;
+            Score5.Visibility = Visibility.Hidden;
+        }
+
+        private void ScoreChoice6_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ScoreChoice6.IsEnabled = false;
+            string choice = dice.setScore(ScoreChoice6, Score6);
+
+            for (int i = 0; i < Abilities.Count; i++)
+            {
+                if (Abilities[i].Equals(choice))
+                    Abilities.Remove(Abilities[i]);
+            }
+
+            ScoreChoice1.ItemsSource = Abilities;
+            ScoreChoice2.ItemsSource = Abilities;
+            ScoreChoice3.ItemsSource = Abilities;
+            ScoreChoice4.ItemsSource = Abilities;
+            ScoreChoice5.ItemsSource = Abilities;
+            ScoreChoice6.ItemsSource = Abilities;
+            Score6.Visibility = Visibility.Hidden;
         }
     }
 }
