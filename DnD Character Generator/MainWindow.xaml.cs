@@ -54,7 +54,7 @@ namespace DnD_Character_Generator
             //and take the sum of the three highest values to set the scores 
             //to use for the abilities
             int[] Scores = new int[6];
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 6; i++) {
                 int num1 = abilityDice.Next(0, 6);
                 int num2 = abilityDice.Next(0, 6);
                 int num3 = abilityDice.Next(0, 6);
@@ -79,12 +79,19 @@ namespace DnD_Character_Generator
             }
 
             //bind the score values to the window display
-            Score1.Content = "{Binding Path = Scores[0]}";
-            Score2.Content = "{Binding Path = Scores[1]}";
-            Score3.Content = "{Binding Path = Scores[2]}";
-            Score4.Content = "{Binding Path = Scores[3]}";
-            Score5.Content = "{Binding Path = Scores[4]}";
-            Score6.Content = "{Binding Path = Scores[5]}";
+            Score1.Content = Scores[0];
+            Score2.Content = Scores[1];
+            Score3.Content = Scores[2];
+            Score4.Content = Scores[3];
+            Score5.Content = Scores[4];
+            Score6.Content = Scores[5];
+
+            ScoreChoice1.IsEnabled = true;
+            ScoreChoice2.IsEnabled = true;
+            ScoreChoice3.IsEnabled = true;
+            ScoreChoice4.IsEnabled = true;
+            ScoreChoice5.IsEnabled = true;
+            ScoreChoice6.IsEnabled = true;
         }
     }
 }
