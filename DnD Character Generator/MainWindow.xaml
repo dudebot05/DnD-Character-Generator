@@ -8,7 +8,7 @@
         Title="MainWindow" Height="524" Width="813">
 
     <Grid>
-        <Button x:Name="Randomizer" Content="Random Character" HorizontalAlignment="Left" Margin="673,19,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Randomizer" Content="Random Character" HorizontalAlignment="Left" Margin="673,19,0,0" VerticalAlignment="Top" Click="Randomizer_Click"/>
         <Label Content="Class: " HorizontalAlignment="Left" Margin="31,29,0,0" VerticalAlignment="Top"/>
         <Label Content="Race: " HorizontalAlignment="Left" Margin="31,72,0,0" VerticalAlignment="Top"/>
         <Label Content="Strength: " HorizontalAlignment="Left" Margin="31,223,0,0" VerticalAlignment="Top"/>
@@ -20,8 +20,8 @@
         <Label Content="Hit Point Maximum: " HorizontalAlignment="Left" Margin="426,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Hit_Die" Content="Roll Hit Die" HorizontalAlignment="Left" Margin="587,75,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Ability_Dice" Content="Roll Ability Dice" HorizontalAlignment="Left" Margin="31,183,0,0" VerticalAlignment="Top" Click="Ability_Dice_Click"/>
-        <ComboBox HorizontalAlignment="Left" Margin="111,31,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="111,74,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="Class_List" HorizontalAlignment="Left" Margin="111,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="Race_List" HorizontalAlignment="Left" Margin="111,74,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Race_List_SelectionChanged"/>
         <Label x:Name="Strength" Content="0" HorizontalAlignment="Left" Margin="126,223,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Dexterity" Content="0" HorizontalAlignment="Left" Margin="126,254,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Constitution" Content="0" HorizontalAlignment="Left" Margin="126,285,0,0" VerticalAlignment="Top"/>

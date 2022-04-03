@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DnD Character Generator",
+    "\\DnD Character Generator\\Character",
+    "\\DnD Character Generator\\Creator"
   ],
-  "SelectedNode": "\\C:\\Users\\Owner\\Source\\Repos\\DnD-Character-Generator",
+  "SelectedNode": "\\DnD Character Generator.sln",
   "PreviewInSolutionExplorer": false
 }

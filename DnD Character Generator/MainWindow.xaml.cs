@@ -30,6 +30,13 @@ namespace DnD_Character_Generator
         };
         Dice dice;
 
+        private int charStrength;
+        private int charDexterity;
+        private int charConstitution;
+        private int charIntelligence;
+        private int charWisdom;
+        private int charCharisma;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -41,6 +48,28 @@ namespace DnD_Character_Generator
             ScoreChoice5.ItemsSource = Abilities;
             ScoreChoice6.ItemsSource = Abilities;
             dice = new Dice(Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
+
+            //ComboBox Selections
+            Class_List.Items.Add("Barbarian");
+            Class_List.Items.Add("Bard");
+            Class_List.Items.Add("Cleric");
+            Class_List.Items.Add("Druid");
+            Class_List.Items.Add("Fighter");
+            Class_List.Items.Add("Monk");
+            Class_List.Items.Add("Ranger");
+            Class_List.Items.Add("Rogue");
+            Class_List.Items.Add("Sorcerer");
+            Class_List.Items.Add("Warlock");
+            Class_List.Items.Add("Wizard");
+
+            Race_List.Items.Add("Dwarf");
+            Race_List.Items.Add("Elf");
+            Race_List.Items.Add("Halfling");
+            Race_List.Items.Add("Human");
+            Race_List.Items.Add("Dragonborn");
+            Race_List.Items.Add("Gnome");
+            Race_List.Items.Add("Half-Elf");
+            Race_List.Items.Add("Half-Orc");
         }
 
         private void Class_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -192,6 +221,27 @@ namespace DnD_Character_Generator
             ScoreChoice5.ItemsSource = Abilities;
             ScoreChoice6.ItemsSource = Abilities;
             Score6.Visibility = Visibility.Hidden;
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Race_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Randomizer_Click(object sender, RoutedEventArgs e)
+        {
+            charStrength = Int32.Parse((string)Strength.Content);
+            charDexterity = Int32.Parse((string)Dexterity.Content);
+            charConstitution = Int32.Parse((string)Constitution.Content);
+            charIntelligence = Int32.Parse((string)Intelligence.Content);
+            charWisdom = Int32.Parse((string)Wisdom.Content);
+            charCharisma = Int32.Parse((string)Charisma.Content);
+
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnD_Character_Generator
 {
-    class Character
+    class CharacterLL
     {
         //interface
 
