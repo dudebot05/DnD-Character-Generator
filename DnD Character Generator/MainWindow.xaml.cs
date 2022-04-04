@@ -45,12 +45,12 @@ namespace DnD_Character_Generator
 
         public void Mod()
         {
-            if ((int)Strength.Content != 0) strengthMod.Content = ((int)Strength.Content - 10) / 2;
-            if ((int)Dexterity.Content != 0) dexterityMod.Content = ((int)Dexterity.Content - 10) / 2;
-            if ((int)Constitution.Content != 0) constitutionMod.Content = ((int)Constitution.Content - 10) / 2;
-            if ((int)Intelligence.Content != 0) intelligenceMod.Content = ((int)Intelligence.Content - 10) / 2;
-            if ((int)Wisdom.Content != 0) wisdomMod.Content = ((int)Wisdom.Content - 10) / 2;
-            if ((int)Charisma.Content != 0) charismaMod.Content = ((int)Charisma.Content - 10) / 2;
+            if (int.Parse(Strength.Content.ToString()) != 0) strengthMod.Content = (int.Parse(Strength.Content.ToString()) - 10) / 2;
+            if (int.Parse(Dexterity.Content.ToString()) != 0) dexterityMod.Content = (int.Parse(Dexterity.Content.ToString()) - 10) / 2;
+            if (int.Parse(Constitution.Content.ToString()) != 0) constitutionMod.Content = (int.Parse(Constitution.Content.ToString()) - 10) / 2;
+            if (int.Parse(Intelligence.Content.ToString()) != 0) intelligenceMod.Content = (int.Parse(Intelligence.Content.ToString()) - 10) / 2;
+            if (int.Parse(Wisdom.Content.ToString()) != 0) wisdomMod.Content = (int.Parse(Wisdom.Content.ToString()) - 10) / 2;
+            if (int.Parse(Charisma.Content.ToString()) != 0) charismaMod.Content = (int.Parse(Charisma.Content.ToString()) - 10) / 2;
         }
 
         private void Class_SelectionChanged(object sender, SelectionChangedEventArgs e)
