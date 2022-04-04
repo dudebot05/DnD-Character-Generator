@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnD_Character_Generator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="524" Width="813">
+        Title="MainWindow" Height="796" Width="813">
 
     <Grid>
         <Button x:Name="Randomizer" Content="Random Character" HorizontalAlignment="Left" Margin="673,19,0,0" VerticalAlignment="Top"/>
@@ -41,6 +41,19 @@
         <ComboBox x:Name="ScoreChoice4" HorizontalAlignment="Left" Margin="352,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice4_SelectionChanged"/>
         <ComboBox x:Name="ScoreChoice5" HorizontalAlignment="Left" Margin="422,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice5_SelectionChanged"/>
         <ComboBox x:Name="ScoreChoice6" HorizontalAlignment="Left" Margin="492,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice6_SelectionChanged"/>
+        <Label Content="Features and Traits" HorizontalAlignment="Left" Margin="587,432,0,0" VerticalAlignment="Top"/>
+        <Label Content="+" HorizontalAlignment="Left" Margin="155,223,0,0" VerticalAlignment="Top"/>
+        <Label Content="+" HorizontalAlignment="Left" Margin="155,254,0,0" VerticalAlignment="Top"/>
+        <Label Content="+" HorizontalAlignment="Left" Margin="155,285,0,0" VerticalAlignment="Top"/>
+        <Label Content="+" HorizontalAlignment="Left" Margin="155,316,0,0" VerticalAlignment="Top"/>
+        <Label Content="+" HorizontalAlignment="Left" Margin="155,347,0,0" VerticalAlignment="Top"/>
+        <Label Content="+" HorizontalAlignment="Left" Margin="155,378,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="strengthMod" Content="0" HorizontalAlignment="Left" Margin="180,223,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="dexterityMod" Content="0" HorizontalAlignment="Left" Margin="180,254,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="constitutionMod" Content="0" HorizontalAlignment="Left" Margin="180,285,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="intelligenceMod" Content="0" HorizontalAlignment="Left" Margin="180,316,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="wisdomMod" Content="0" HorizontalAlignment="Left" Margin="180,347,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="charismaMod" Content="0" HorizontalAlignment="Left" Margin="180,378,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

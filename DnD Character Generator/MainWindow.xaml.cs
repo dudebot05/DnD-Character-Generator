@@ -43,6 +43,16 @@ namespace DnD_Character_Generator
             dice = new Dice(Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
         }
 
+        public void Mod()
+        {
+            if ((int)Strength.Content != 0) strengthMod.Content = ((int)Strength.Content - 10) / 2;
+            if ((int)Dexterity.Content != 0) dexterityMod.Content = ((int)Dexterity.Content - 10) / 2;
+            if ((int)Constitution.Content != 0) constitutionMod.Content = ((int)Constitution.Content - 10) / 2;
+            if ((int)Intelligence.Content != 0) intelligenceMod.Content = ((int)Intelligence.Content - 10) / 2;
+            if ((int)Wisdom.Content != 0) wisdomMod.Content = ((int)Wisdom.Content - 10) / 2;
+            if ((int)Charisma.Content != 0) charismaMod.Content = ((int)Charisma.Content - 10) / 2;
+        }
+
         private void Class_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -78,6 +88,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice1.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice1, Score1);
+            Mod();
 
             for (int i = 0; i < Abilities.Count; i++)
             {
@@ -98,6 +109,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice2.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice2, Score2);
+            Mod();
 
             for (int i = 0; i < Abilities.Count; i++)
             {
@@ -118,6 +130,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice3.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice3, Score3);
+            Mod();
 
             for (int i = 0; i < Abilities.Count; i++)
             {
@@ -138,6 +151,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice4.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice4, Score4);
+            Mod();
 
             for (int i = 0; i < Abilities.Count; i++)
             {
@@ -158,6 +172,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice5.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice5, Score5);
+            Mod();
 
             for (int i = 0; i < Abilities.Count; i++)
             {
@@ -178,6 +193,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice6.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice6, Score6);
+            Mod();
 
             for (int i = 0; i < Abilities.Count; i++)
             {
