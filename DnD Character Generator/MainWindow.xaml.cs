@@ -237,14 +237,14 @@ namespace DnD_Character_Generator
 
         private void Randomizer_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            charStrength = Int32.Parse(Strength.Content);
-            charDexterity = Int32.Parse(Dexterity.Content);
-            charConstitution = Int32.Parse(Constitution.Content);
-            charIntelligence = Int32.Parse(Intelligence.Content);
-            charWisdom = Int32.Parse(Wisdom.Content);
-            charCharisma = Int32.ParseCharisma.Content);
-            */
+            
+            int charStrength = Int32.Parse(Strength.Content.ToString());
+            int charDexterity = Int32.Parse(Dexterity.Content.ToString());
+            int charConstitution = Int32.Parse(Constitution.Content.ToString());
+            int charIntelligence = Int32.Parse(Intelligence.Content.ToString());
+            int charWisdom = Int32.Parse(Wisdom.Content.ToString());
+            int charCharisma = Int32.Parse(Charisma.Content.ToString());
+            
 
         }
     }
