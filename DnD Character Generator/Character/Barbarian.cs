@@ -1,32 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace DnD_Character_Generator.Character
-{
-    class Barbarian : ICharacter
+ class Barbarian : ICharacter
     {
-        private int Strength;
-        private int Dexterity;
-        private int Constitution;
-        private int Intelligence;
-        private int Wisdom;
-        private int Charisma;
+        private int Strength = 0;
+        private int Dexterity = 0;
+        private int Constitution = 0;
+        private int Intelligence = 0;
+        private int Wisdom = 0;
+        private int Charisma = 0;
 
-        public Barbarian(string race,int Strength, int Dexterity, int Constituition, int Intelligence, int Wisdom, int Charisma)
+        public Barbarian(string race, int Str, int Dex, int Const, int Int, int Wis, int Char)
         {
 
-            Strength = this.Strength;
-            Dexterity = this.Dexterity;
-            Constituition = this.Constitution;
-            Intelligence = this.Intelligence;
-            Wisdom = this.Wisdom;
-            Charisma = this.Charisma;
+            Strength = Str;
+            Dexterity = Dex;
+            Constitution = Const;
+            Intelligence = Int;
+            Wisdom = Wis;
+            Charisma = Char;
 
             switch (race)
             {
                 case "Dwarf":
-                    Constituition += 2;
+                    Constitution += 2;
                     break;
                 case "Elf":
                     Dexterity += 2;
@@ -51,10 +48,9 @@ namespace DnD_Character_Generator.Character
                     break;
                 case "Half-Orc":
                     Strength += 2;
-                    Constituition += 1;
+                    Constitution += 1;
                     break;
 
             }
         }
     }
-}

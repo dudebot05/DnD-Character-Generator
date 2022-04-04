@@ -9,11 +9,11 @@
     private int Wisdom;
     private int Charisma;
 
-    public override ICharacter createCharacter(int Strength, int Dexterity, int Constituition, int Intelligence, int Wisdom, int Charisma, string race)
+    public override ICharacter createCharacter(int Strength, int Dexterity, int Constitution, int Intelligence, int Wisdom, int Charisma, string race)
     {
         Strength = this.Strength;
         Dexterity = this.Dexterity;
-        Constituition = this.Constitution;
+        Constitution = this.Constitution;
         Intelligence = this.Intelligence;
         Wisdom = this.Wisdom;
         Charisma = this.Charisma;
@@ -22,7 +22,7 @@
 
         switch (race) {
             case "Dwarf":
-                Constituition += 2;
+                Constitution += 2;
                 break;
             case "Elf":
                 Dexterity += 2;
@@ -47,12 +47,12 @@
                 break;
             case "Half-Orc":
                 Strength += 2;
-                Constituition += 1;
+                Constitution += 1;
                 break;
             
         }
 
-        return new Bard(Strength,Dexterity,Constituition,Intelligence,Wisdom,Charisma);
+        return new Bard(Strength,Dexterity,Constitution,Intelligence,Wisdom,Charisma);
 
     }
 } */
