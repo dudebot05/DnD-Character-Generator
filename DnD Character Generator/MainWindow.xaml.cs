@@ -37,7 +37,7 @@ namespace DnD_Character_Generator
         private int charWisdom;
         private int charCharisma;
         private string race;
-        private string dndclass;
+        private string dndClass;
 
         public MainWindow()
         {
@@ -238,12 +238,12 @@ namespace DnD_Character_Generator
         private void Randomizer_Click(object sender, RoutedEventArgs e)
         {
             
-            int charStrength = Int32.Parse(Strength.Content.ToString());
-            int charDexterity = Int32.Parse(Dexterity.Content.ToString());
-            int charConstitution = Int32.Parse(Constitution.Content.ToString());
-            int charIntelligence = Int32.Parse(Intelligence.Content.ToString());
-            int charWisdom = Int32.Parse(Wisdom.Content.ToString());
-            int charCharisma = Int32.Parse(Charisma.Content.ToString());
+            charStrength = Int32.Parse(Strength.Content.ToString());
+            charDexterity = Int32.Parse(Dexterity.Content.ToString());
+            charConstitution = Int32.Parse(Constitution.Content.ToString());
+            charIntelligence = Int32.Parse(Intelligence.Content.ToString());
+            charWisdom = Int32.Parse(Wisdom.Content.ToString());
+            charCharisma = Int32.Parse(Charisma.Content.ToString());
             
 
         }

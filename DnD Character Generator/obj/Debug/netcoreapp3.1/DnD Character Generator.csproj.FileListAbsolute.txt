@@ -38,3 +38,23 @@ C:\Users\aaron\Documents\School\CTEC-295\Dns Character Generator\DnD Character G
 C:\Users\aaron\Documents\School\CTEC-295\Dns Character Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.AssemblyInfo.cs
 C:\Users\aaron\Documents\School\CTEC-295\Dns Character Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.csproj.CoreCompileInputs.cache
 C:\Users\aaron\Documents\School\CTEC-295\Dns Character Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.genruntimeconfig.cache
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\bin\Debug\netcoreapp3.1\DnD Character Generator.exe
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\bin\Debug\netcoreapp3.1\DnD Character Generator.deps.json
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\bin\Debug\netcoreapp3.1\DnD Character Generator.runtimeconfig.json
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\bin\Debug\netcoreapp3.1\DnD Character Generator.runtimeconfig.dev.json
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\bin\Debug\netcoreapp3.1\DnD Character Generator.dll
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\bin\Debug\netcoreapp3.1\DnD Character Generator.pdb
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.csproj.AssemblyReference.cache
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator_MarkupCompile.cache
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator_MarkupCompile.lref
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.g.resources
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.AssemblyInfoInputs.cache
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.AssemblyInfo.cs
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.dll
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.pdb
+C:\Users\Owner\Source\Repos\DnD-Character-Generator\DnD Character Generator\obj\Debug\netcoreapp3.1\DnD Character Generator.genruntimeconfig.cache
