@@ -36,6 +36,7 @@ namespace DnD_Character_Generator
         private int charIntelligence;
         private int charWisdom;
         private int charCharisma;
+        private int hitDie;
         private string race;
         private string dndClass;
 
@@ -58,6 +59,7 @@ namespace DnD_Character_Generator
             Class_List.Items.Add("Druid");
             Class_List.Items.Add("Fighter");
             Class_List.Items.Add("Monk");
+            Class_List.Items.Add("Paladin");
             Class_List.Items.Add("Ranger");
             Class_List.Items.Add("Rogue");
             Class_List.Items.Add("Sorcerer");
@@ -72,11 +74,6 @@ namespace DnD_Character_Generator
             Race_List.Items.Add("Gnome");
             Race_List.Items.Add("Half-Elf");
             Race_List.Items.Add("Half-Orc");
-        }
-
-        private void Class_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
 
         private void Ability_Dice_Click(object sender, RoutedEventArgs e)
@@ -225,9 +222,11 @@ namespace DnD_Character_Generator
             Score6.Visibility = Visibility.Hidden;
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Class_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             dndClass = Class_List.Text;
+            hitDie = dice.setHitDie(Class_List);
+            Hitpoints.Content = hitDie;
         }
 
         private void Race_List_SelectionChanged(object sender, SelectionChangedEventArgs e)

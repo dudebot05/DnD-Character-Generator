@@ -18,9 +18,8 @@
         <Label Content="Wisdom: " HorizontalAlignment="Left" Margin="31,347,0,0" VerticalAlignment="Top"/>
         <Label Content="Charisma: " HorizontalAlignment="Left" Margin="31,378,0,0" VerticalAlignment="Top"/>
         <Label Content="Hit Point Maximum: " HorizontalAlignment="Left" Margin="426,72,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Hit_Die" Content="Roll Hit Die" HorizontalAlignment="Left" Margin="587,75,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Ability_Dice" Content="Roll Ability Dice" HorizontalAlignment="Left" Margin="31,183,0,0" VerticalAlignment="Top" Click="Ability_Dice_Click"/>
-        <ComboBox x:Name="Class_List" HorizontalAlignment="Left" Margin="111,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="Class_List" HorizontalAlignment="Left" Margin="111,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Class_List_SelectionChanged"/>
         <ComboBox x:Name="Race_List" HorizontalAlignment="Left" Margin="111,74,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Race_List_SelectionChanged"/>
         <Label x:Name="Strength" Content="0" HorizontalAlignment="Left" Margin="126,223,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Dexterity" Content="0" HorizontalAlignment="Left" Margin="126,254,0,0" VerticalAlignment="Top"/>
@@ -54,6 +53,7 @@
         <Label x:Name="intelligenceMod" Content="0" HorizontalAlignment="Left" Margin="180,316,0,0" VerticalAlignment="Top"/>
         <Label x:Name="wisdomMod" Content="0" HorizontalAlignment="Left" Margin="180,347,0,0" VerticalAlignment="Top"/>
         <Label x:Name="charismaMod" Content="0" HorizontalAlignment="Left" Margin="180,378,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Hitpoints" Content="0" HorizontalAlignment="Left" Margin="544,72,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

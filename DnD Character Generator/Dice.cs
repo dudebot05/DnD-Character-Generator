@@ -58,6 +58,53 @@ namespace DnD_Character_Generator
             return Scores;
         }
 
+        public int setHitDie(ComboBox classChoice)
+        {
+            int hitDie = 0;
+
+            switch (classChoice.SelectedItem)
+            {
+                case "Barbarian":
+                    hitDie = 12;
+                    break;
+                case "Bard":
+                    hitDie = 8;
+                    break;
+                case "Cleric":
+                    hitDie = 8;
+                    break;
+                case "Druid":
+                    hitDie = 8;
+                    break;
+                case "Fighter":
+                    hitDie = 10;
+                    break;
+                case "Monk":
+                    hitDie = 8;
+                    break;
+                case "Paladin":
+                    hitDie = 10;
+                    break;
+                case "Ranger":
+                    hitDie = 10;
+                    break;
+                case "Rogue":
+                    hitDie = 8;
+                    break;
+                case "Sorcerer":
+                    hitDie = 6;
+                    break;
+                case "Warlock":
+                    hitDie = 8;
+                    break;
+                case "Wizard":
+                    hitDie = 6;
+                    break;
+            }
+
+            return hitDie;
+        }
+
         public String setScore(ComboBox scoreChoice, Label score)
         {
             switch (scoreChoice.SelectedItem)

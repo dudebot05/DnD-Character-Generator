@@ -17,7 +17,7 @@ using System.Text;
                 case "Barbarian":
                     return new Barbarian(race, Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
                 case "Bard":
-                    return new Bard(race,Strength,Dexterity,Constitution,Intelligence,Wisdom,Charisma);
+                    return new Bard(race, Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
                 case "Cleric":
                     return new Cleric(race, Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
                 case "Druid":
