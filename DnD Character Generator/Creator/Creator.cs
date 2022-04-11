@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DnD_Character_Generator.Creator
-{
-    abstract class Creator
+
+    public abstract class Creator
     {
         public abstract ICharacter createCharacter(string dndclass, string race, int Strength, int Dexterity, int Constitution, int Intelligence, int Wisdom, int Charisma);
     }
@@ -42,4 +41,4 @@ namespace DnD_Character_Generator.Creator
             }
         }
     }
-}
+

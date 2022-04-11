@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Owner\\Source\\Repos\\DnD-Character-Generator\\DnD Character Generator\\DnD Character Generator.csproj": {}
+    "C:\\Users\\aaron\\Documents\\School\\CTEC-295\\Dns Character Generator\\DnD Character Generator\\DnD Character Generator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Owner\\Source\\Repos\\DnD-Character-Generator\\DnD Character Generator\\DnD Character Generator.csproj": {
+    "C:\\Users\\aaron\\Documents\\School\\CTEC-295\\Dns Character Generator\\DnD Character Generator\\DnD Character Generator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\Source\\Repos\\DnD-Character-Generator\\DnD Character Generator\\DnD Character Generator.csproj",
+        "projectUniqueName": "C:\\Users\\aaron\\Documents\\School\\CTEC-295\\Dns Character Generator\\DnD Character Generator\\DnD Character Generator.csproj",
         "projectName": "DnD Character Generator",
-        "projectPath": "C:\\Users\\Owner\\Source\\Repos\\DnD-Character-Generator\\DnD Character Generator\\DnD Character Generator.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\Source\\Repos\\DnD-Character-Generator\\DnD Character Generator\\obj\\",
+        "projectPath": "C:\\Users\\aaron\\Documents\\School\\CTEC-295\\Dns Character Generator\\DnD Character Generator\\DnD Character Generator.csproj",
+        "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aaron\\Documents\\School\\CTEC-295\\Dns Character Generator\\DnD Character Generator\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aaron\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

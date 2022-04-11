@@ -227,12 +227,12 @@ namespace DnD_Character_Generator
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            dndClass = Class_List.Text;
         }
 
         private void Race_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            race = Race_List.Text;
         }
 
         private void Randomizer_Click(object sender, RoutedEventArgs e)
@@ -244,8 +244,10 @@ namespace DnD_Character_Generator
             charIntelligence = Int32.Parse(Intelligence.Content.ToString());
             charWisdom = Int32.Parse(Wisdom.Content.ToString());
             charCharisma = Int32.Parse(Charisma.Content.ToString());
-            
 
+            Creator generator = new CreateCharacter();
+
+            ICharacter myCharacter = generator.createCharacter(dndClass, race, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
         }
     }
 }
