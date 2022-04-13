@@ -106,6 +106,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice1.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice1, Score1);
+            dice.setModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
 
             for (int i = 0; i < Abilities.Count; i++)
             {
@@ -126,6 +127,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice2.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice2, Score2);
+            dice.setModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
 
             for (int i = 0; i < Abilities.Count; i++)
             {
@@ -146,6 +148,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice3.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice3, Score3);
+            dice.setModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
 
             for (int i = 0; i < Abilities.Count; i++)
             {
@@ -166,6 +169,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice4.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice4, Score4);
+            dice.setModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
 
             for (int i = 0; i < Abilities.Count; i++)
             {
@@ -186,6 +190,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice5.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice5, Score5);
+            dice.setModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
 
             for (int i = 0; i < Abilities.Count; i++)
             {
@@ -206,6 +211,7 @@ namespace DnD_Character_Generator
         {
             ScoreChoice6.IsEnabled = false;
             string choice = dice.setScore(ScoreChoice6, Score6);
+            dice.setModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
 
             for (int i = 0; i < Abilities.Count; i++)
             {

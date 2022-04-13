@@ -131,5 +131,15 @@ namespace DnD_Character_Generator
 
             return (string)scoreChoice.SelectedItem;
         }
+
+        public void setModifiers(Label strMod, Label dexMod, Label conMod, Label intMod, Label wisMod, Label chrMod)
+        {
+            strMod.Content = (int.Parse(Strength.Content.ToString()) - 10) / 2;
+            dexMod.Content = (int.Parse(Dexterity.Content.ToString()) - 10) / 2;
+            conMod.Content = (int.Parse(Constitution.Content.ToString()) - 10) / 2;
+            intMod.Content = (int.Parse(Intelligence.Content.ToString()) - 10) / 2;
+            wisMod.Content = (int.Parse(Wisdom.Content.ToString()) - 10) / 2;
+            chrMod.Content = (int.Parse(Charisma.Content.ToString()) - 10) / 2;
+        }
     }
 }
