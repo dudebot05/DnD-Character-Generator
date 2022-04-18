@@ -74,6 +74,7 @@ namespace DnD_Character_Generator
             Race_List.Items.Add("Gnome");
             Race_List.Items.Add("Half-Elf");
             Race_List.Items.Add("Half-Orc");
+            Race_List.Items.Add("Tiefling");
         }
 
         private void Ability_Dice_Click(object sender, RoutedEventArgs e)

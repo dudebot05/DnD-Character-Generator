@@ -31,7 +31,7 @@ class Rogue : ICharacter
             case "Human":
                 Charisma += 1;
                 break;
-            case "Dragonbborn":
+            case "Dragonborn":
                 Strength += 2;
                 Charisma += 1;
                 break;
@@ -46,6 +46,10 @@ class Rogue : ICharacter
             case "Half-Orc":
                 Strength += 2;
                 Constitution += 1;
+                break;
+            case "Tiefling":
+                Intelligence += 1;
+                Charisma += 2;
                 break;
 
         }
