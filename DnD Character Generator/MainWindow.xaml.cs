@@ -28,7 +28,9 @@ namespace DnD_Character_Generator
             "Wisdom",
             "Charisma"
         };
+
         Dice dice;
+        ICharacter currentChar;
 
         private int charStrength;
         private int charDexterity;

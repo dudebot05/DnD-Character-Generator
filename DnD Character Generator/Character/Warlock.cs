@@ -1,6 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DnD_Character_Generator.Filesave;
+using Microsoft.Win32;
+using System.Diagnostics;
+using System.IO;
+using System.Text.Json;
+using System.Windows;
 
 
 class Warlock : ICharacter
@@ -11,8 +14,10 @@ class Warlock : ICharacter
     private int Intelligence = 0;
     private int Wisdom = 0;
     private int Charisma = 0;
+    private string Race;
+    private string Name;
 
-    public Warlock(string race, int Str, int Dex, int Const, int Int, int Wis, int Char)
+    public Warlock(string race, string name, int Str, int Dex, int Const, int Int, int Wis, int Char)
     {
 
         Strength = Str;
@@ -21,6 +26,8 @@ class Warlock : ICharacter
         Intelligence = Int;
         Wisdom = Wis;
         Charisma = Char;
+        Race = race;
+        Name = name;
 
         switch (race)
         {
@@ -56,6 +63,28 @@ class Warlock : ICharacter
                 Intelligence += 1;
                 Charisma += 2;
                 break;
+        }
+    }
+
+    public void SaveCharacter(SaveFileDialog saveDialog)
+    {
+        Load save = new Load
+        {
+            strength = Strength,
+            constitution = Constitution,
+            intelligence = Intelligence,
+            wisdom = Wisdom,
+            charisma = Charisma,
+            race = Race,
+            name = Name
+        };
+        using (Stream output = File.Create(saveDialog.FileName))
+        using (BinaryWriter writer = new BinaryWriter(output))
+        {
+            var jsonChar = JsonSerializer.Serialize<Load>(save);
+            Debug.WriteLine(jsonChar);
+            writer.Write(jsonChar);
+            MessageBox.Show("Barbarian saved at " + saveDialog.FileName);
         }
     }
 }

@@ -1,3 +1,5 @@
+using Microsoft.Win32;
+
 public interface ICharacter
 {
     //GenerateName(){}
@@ -6,5 +8,5 @@ public interface ICharacter
 
     //GenerateEquipment(){}
 
-    //SaveFile(){}
+    void SaveCharacter(SaveFileDialog saveDialog);
 }
