@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -41,6 +42,10 @@ namespace DnD_Character_Generator
         private int hitDie;
         private string race;
         private string dndClass;
+        private string name;
+
+        SaveFileDialog saveDialog;
+        OpenFileDialog openDialog;
 
         public MainWindow()
         {
@@ -53,6 +58,9 @@ namespace DnD_Character_Generator
             ScoreChoice5.ItemsSource = Abilities;
             ScoreChoice6.ItemsSource = Abilities;
             dice = new Dice(Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
+            saveDialog = new SaveFileDialog();
+            openDialog = new OpenFileDialog();
+            
 
             //ComboBox Selections
             Class_List.Items.Add("Barbarian");
@@ -255,7 +263,22 @@ namespace DnD_Character_Generator
 
             Creator generator = new CreateCharacter();
 
-            ICharacter myCharacter = generator.createCharacter(dndClass, race, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
+            currentChar = generator.createCharacter(dndClass, race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            saveDialog.Filter = "DnD Files |*.dnd";
+            openDialog.Filter = "DnD Files |*.dnd";
+            saveDialog.DefaultExt = "DnD Files |*.dnd";
+            openDialog.DefaultExt = "DnD Files |*.dnd";
+
+            if (saveDialog.ShowDialog() == true) currentChar.SaveCharacter(saveDialog);
+        }
+
+        private void Name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            name = Name.Text;
         }
     }
 }

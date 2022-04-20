@@ -7,6 +7,7 @@ using System.IO;
 using System.Text;
 using System.Text.Json;
 using System.Windows;
+using System.Windows.Controls;
 
 class Barbarian : ICharacter
 {
@@ -19,9 +20,10 @@ class Barbarian : ICharacter
     private string Race;
     private string Name;
 
-    public Barbarian(string race, string name, int Str, int Dex, int Const, int Int, int Wis, int Char)
-    {
+    public Barbarian() { }
 
+    public void InitChar(string race, string name, int Str, int Dex, int Const, int Int, int Wis, int Char)
+    {
         Strength = Str;
         Dexterity = Dex;
         Constitution = Const;
@@ -30,41 +32,43 @@ class Barbarian : ICharacter
         Charisma = Char;
         Race = race;
         Name = name;
+    }
 
-
-        switch (race)
+    public void InitRaceModifiers(Label Str, Label Dex, Label Const, Label Int, Label Wis, Label Char)
+    {
+        switch (Race)
         {
             case "Dwarf":
-                Constitution += 2;
+                Const.Content = int.Parse(Const.Content.ToString()) + 2;
                 break;
             case "Elf":
-                Dexterity += 2;
+                Dex.Content = int.Parse(Dex.Content.ToString()) + 2;
                 break;
             case "Halfling":
-                Dexterity += 2;
+                Dex.Content = int.Parse(Dex.Content.ToString()) + 2;
                 break;
             case "Human":
-                Charisma += 1;
+                Char.Content = int.Parse(Char.Content.ToString()) + 1;
                 break;
             case "Dragonborn":
-                Strength += 2;
-                Charisma += 1;
+                Str.Content = int.Parse(Str.Content.ToString()) + 2;
+                Char.Content = int.Parse(Char.Content.ToString()) + 1;
                 break;
             case "Gnome":
-                Intelligence += 2;
+                Int.Content = int.Parse(Int.Content.ToString()) + 2;
                 break;
             case "Half-Elf":
-                Charisma += 2;
-                Intelligence += 1; //Could be a stat chosen by player
-                Wisdom += 1; //Could be a stat chosen by player
+                Char.Content = int.Parse(Char.Content.ToString()) + 2;
+                Int.Content = int.Parse(Int.Content.ToString()) + 1; //Could be a stat chosen by player
+                Wis.Content = int.Parse(Wis.Content.ToString()) + 1; //Could be a stat chosen by player
                 break;
             case "Half-Orc":
-                Strength += 2;
-                Constitution += 1;
+                Str.Content = int.Parse(Str.Content.ToString()) + 2;
+                Const.Content = int.Parse(Const.Content.ToString()) + 1;
                 break;
             case "Tiefling":
-                Intelligence += 1;
-                Charisma += 2;
+                Int.Content = int.Parse(Int.Content.ToString()) + 1;
+                Char.Content = int.Parse(Char.Content.ToString()) + 2;
                 break;
 
         }
