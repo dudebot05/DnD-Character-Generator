@@ -17,7 +17,7 @@
         <Label Content="Intelligence: " HorizontalAlignment="Left" Margin="31,316,0,0" VerticalAlignment="Top"/>
         <Label Content="Wisdom: " HorizontalAlignment="Left" Margin="31,347,0,0" VerticalAlignment="Top"/>
         <Label Content="Charisma: " HorizontalAlignment="Left" Margin="31,378,0,0" VerticalAlignment="Top"/>
-        <Label Content="Hit Point Maximum: " HorizontalAlignment="Left" Margin="426,72,0,0" VerticalAlignment="Top"/>
+        <Label Content="Hit Point Maximum: " HorizontalAlignment="Left" Margin="627,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Ability_Dice" Content="Roll Ability Dice" HorizontalAlignment="Left" Margin="31,183,0,0" VerticalAlignment="Top" Click="Ability_Dice_Click"/>
         <ComboBox x:Name="Class_List" HorizontalAlignment="Left" Margin="111,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Class_List_SelectionChanged"/>
         <ComboBox x:Name="Race_List" HorizontalAlignment="Left" Margin="111,74,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Race_List_SelectionChanged"/>
@@ -53,9 +53,15 @@
         <Label x:Name="intelligenceMod" Content="0" HorizontalAlignment="Left" Margin="180,316,0,0" VerticalAlignment="Top"/>
         <Label x:Name="wisdomMod" Content="0" HorizontalAlignment="Left" Margin="180,347,0,0" VerticalAlignment="Top"/>
         <Label x:Name="charismaMod" Content="0" HorizontalAlignment="Left" Margin="180,378,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Hitpoints" Content="0" HorizontalAlignment="Left" Margin="544,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Hitpoints" Content="0" HorizontalAlignment="Left" Margin="750,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Save" Content="Save Character" HorizontalAlignment="Left" Margin="704,737,0,0" VerticalAlignment="Top" Click="Save_Click"/>
         <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="388,19,0,0" Text="Character Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Name_TextChanged"/>
+        <Label Content="Armor:" HorizontalAlignment="Left" Margin="378,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Armor_stat" Content="0" HorizontalAlignment="Left" Margin="432,72,0,0" VerticalAlignment="Top"/>
+        <Label Content="Initiative:" HorizontalAlignment="Left" Margin="460,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Initiative_stat" Content="0" HorizontalAlignment="Left" Margin="523,72,0,0" VerticalAlignment="Top"/>
+        <Label Content="Speed:" HorizontalAlignment="Left" Margin="544,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Speed_stat" Content="0" HorizontalAlignment="Left" Margin="602,72,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

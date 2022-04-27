@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eli\\Desktop\\DnD-Character-Generator\\DnD Character Generator\\DnD Character Generator.csproj": {}
+    "C:\\Users\\13184\\OneDrive\\Documents\\GitHub\\DnD Character Generator\\DnD Character Generator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eli\\Desktop\\DnD-Character-Generator\\DnD Character Generator\\DnD Character Generator.csproj": {
+    "C:\\Users\\13184\\OneDrive\\Documents\\GitHub\\DnD Character Generator\\DnD Character Generator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eli\\Desktop\\DnD-Character-Generator\\DnD Character Generator\\DnD Character Generator.csproj",
+        "projectUniqueName": "C:\\Users\\13184\\OneDrive\\Documents\\GitHub\\DnD Character Generator\\DnD Character Generator.csproj",
         "projectName": "DnD Character Generator",
-        "projectPath": "C:\\Users\\Eli\\Desktop\\DnD-Character-Generator\\DnD Character Generator\\DnD Character Generator.csproj",
-        "packagesPath": "C:\\Users\\Eli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eli\\Desktop\\DnD-Character-Generator\\DnD Character Generator\\obj\\",
+        "projectPath": "C:\\Users\\13184\\OneDrive\\Documents\\GitHub\\DnD Character Generator\\DnD Character Generator.csproj",
+        "packagesPath": "C:\\Users\\13184\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\13184\\OneDrive\\Documents\\GitHub\\DnD Character Generator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\13184\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -57,7 +55,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
