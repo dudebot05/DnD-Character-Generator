@@ -14,5 +14,6 @@ namespace DnD_Character_Generator.Filesave
         public int charisma { get; set; }
         public string race { get; set; }
         public string name { get; set; }
+        public string charClass { get; set; }
     }
 }

@@ -9,7 +9,7 @@ using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 
-class Barbarian : ICharacter
+class Paladin : ICharacter
 {
     private int Strength = 0;
     private int Dexterity = 0;
@@ -20,7 +20,7 @@ class Barbarian : ICharacter
     private string Race;
     private string Name;
 
-    public Barbarian(Load character)
+    public Paladin(Load character)
     {
         Strength = character.strength;
         Dexterity = character.dexterity;
@@ -32,7 +32,7 @@ class Barbarian : ICharacter
         Name = character.name;
     }
 
-    public Barbarian() { }
+    public Paladin() { }
 
     public void InitChar(string race, string name, int Str, int Dex, int Const, int Int, int Wis, int Char)
     {
@@ -98,7 +98,7 @@ class Barbarian : ICharacter
             charisma = Charisma,
             race = Race,
             name = Name,
-            charClass = "Barbarian"
+            charClass = "Paladin"
         };
         using (Stream output = File.Create(saveDialog.FileName))
         using (BinaryWriter writer = new BinaryWriter(output))
@@ -106,7 +106,7 @@ class Barbarian : ICharacter
             var jsonChar = JsonSerializer.Serialize<Load>(save);
             Debug.WriteLine(jsonChar);
             writer.Write(jsonChar);
-            MessageBox.Show("Barbarian saved at " + saveDialog.FileName);
+            MessageBox.Show("Paladin saved at " + saveDialog.FileName);
         }
     }
 }

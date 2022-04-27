@@ -44,6 +44,7 @@ namespace DnD_Character_Generator
         private string dndClass;
         private string name;
 
+        Creator generator;
         SaveFileDialog saveDialog;
         OpenFileDialog openDialog;
 
@@ -60,7 +61,8 @@ namespace DnD_Character_Generator
             dice = new Dice(Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
             saveDialog = new SaveFileDialog();
             openDialog = new OpenFileDialog();
-            
+            generator = new CreateCharacter();
+
 
             //ComboBox Selections
             Class_List.Items.Add("Barbarian");
@@ -132,6 +134,13 @@ namespace DnD_Character_Generator
             ScoreChoice5.ItemsSource = Abilities;
             ScoreChoice6.ItemsSource = Abilities;
             Score1.Visibility = Visibility.Hidden;
+
+            charStrength = int.Parse(Strength.Content.ToString());
+            charDexterity = int.Parse(Dexterity.Content.ToString());
+            charConstitution = int.Parse(Constitution.Content.ToString());
+            charIntelligence = int.Parse(Intelligence.Content.ToString());
+            charWisdom = int.Parse(Wisdom.Content.ToString());
+            charCharisma = int.Parse(Charisma.Content.ToString());
         }
 
         private void ScoreChoice2_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -153,6 +162,13 @@ namespace DnD_Character_Generator
             ScoreChoice5.ItemsSource = Abilities;
             ScoreChoice6.ItemsSource = Abilities;
             Score2.Visibility = Visibility.Hidden;
+
+            charStrength = int.Parse(Strength.Content.ToString());
+            charDexterity = int.Parse(Dexterity.Content.ToString());
+            charConstitution = int.Parse(Constitution.Content.ToString());
+            charIntelligence = int.Parse(Intelligence.Content.ToString());
+            charWisdom = int.Parse(Wisdom.Content.ToString());
+            charCharisma = int.Parse(Charisma.Content.ToString());
         }
 
         private void ScoreChoice3_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -174,6 +190,13 @@ namespace DnD_Character_Generator
             ScoreChoice5.ItemsSource = Abilities;
             ScoreChoice6.ItemsSource = Abilities;
             Score3.Visibility = Visibility.Hidden;
+
+            charStrength = int.Parse(Strength.Content.ToString());
+            charDexterity = int.Parse(Dexterity.Content.ToString());
+            charConstitution = int.Parse(Constitution.Content.ToString());
+            charIntelligence = int.Parse(Intelligence.Content.ToString());
+            charWisdom = int.Parse(Wisdom.Content.ToString());
+            charCharisma = int.Parse(Charisma.Content.ToString());
         }
 
         private void ScoreChoice4_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -195,6 +218,13 @@ namespace DnD_Character_Generator
             ScoreChoice5.ItemsSource = Abilities;
             ScoreChoice6.ItemsSource = Abilities;
             Score4.Visibility = Visibility.Hidden;
+
+            charStrength = int.Parse(Strength.Content.ToString());
+            charDexterity = int.Parse(Dexterity.Content.ToString());
+            charConstitution = int.Parse(Constitution.Content.ToString());
+            charIntelligence = int.Parse(Intelligence.Content.ToString());
+            charWisdom = int.Parse(Wisdom.Content.ToString());
+            charCharisma = int.Parse(Charisma.Content.ToString());
         }
 
         private void ScoreChoice5_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -216,6 +246,13 @@ namespace DnD_Character_Generator
             ScoreChoice5.ItemsSource = Abilities;
             ScoreChoice6.ItemsSource = Abilities;
             Score5.Visibility = Visibility.Hidden;
+
+            charStrength = int.Parse(Strength.Content.ToString());
+            charDexterity = int.Parse(Dexterity.Content.ToString());
+            charConstitution = int.Parse(Constitution.Content.ToString());
+            charIntelligence = int.Parse(Intelligence.Content.ToString());
+            charWisdom = int.Parse(Wisdom.Content.ToString());
+            charCharisma = int.Parse(Charisma.Content.ToString());
         }
 
         private void ScoreChoice6_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -237,6 +274,13 @@ namespace DnD_Character_Generator
             ScoreChoice5.ItemsSource = Abilities;
             ScoreChoice6.ItemsSource = Abilities;
             Score6.Visibility = Visibility.Hidden;
+
+            charStrength = int.Parse(Strength.Content.ToString());
+            charDexterity = int.Parse(Dexterity.Content.ToString());
+            charConstitution = int.Parse(Constitution.Content.ToString());
+            charIntelligence = int.Parse(Intelligence.Content.ToString());
+            charWisdom = int.Parse(Wisdom.Content.ToString());
+            charCharisma = int.Parse(Charisma.Content.ToString());
         }
 
         private void Class_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -244,11 +288,15 @@ namespace DnD_Character_Generator
             dndClass = Class_List.Text;
             hitDie = dice.setHitDie(Class_List);
             Hitpoints.Content = hitDie;
+
+            currentChar = generator.createCharacter(dndClass);
+            currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
         }
 
         private void Race_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             race = Race_List.Text;
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
         }
 
         private void Randomizer_Click(object sender, RoutedEventArgs e)
@@ -261,9 +309,7 @@ namespace DnD_Character_Generator
             charWisdom = Int32.Parse(Wisdom.Content.ToString());
             charCharisma = Int32.Parse(Charisma.Content.ToString());
 
-            Creator generator = new CreateCharacter();
-
-            currentChar = generator.createCharacter(dndClass, race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
+            currentChar = generator.createCharacter(dndClass);
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)

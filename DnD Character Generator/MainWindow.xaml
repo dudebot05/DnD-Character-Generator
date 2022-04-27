@@ -54,8 +54,9 @@
         <Label x:Name="wisdomMod" Content="0" HorizontalAlignment="Left" Margin="180,347,0,0" VerticalAlignment="Top"/>
         <Label x:Name="charismaMod" Content="0" HorizontalAlignment="Left" Margin="180,378,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Hitpoints" Content="0" HorizontalAlignment="Left" Margin="544,72,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Save" Content="Save Character" HorizontalAlignment="Left" Margin="704,737,0,0" VerticalAlignment="Top" Click="Save_Click"/>
+        <Button x:Name="SaveButton" Content="Save Character" HorizontalAlignment="Left" Margin="704,737,0,0" VerticalAlignment="Top" Click="Save_Click"/>
         <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="388,19,0,0" Text="Character Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Name_TextChanged"/>
+        <Button x:Name="LoadButton" Content="Load Character" HorizontalAlignment="Left" Margin="599,737,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
