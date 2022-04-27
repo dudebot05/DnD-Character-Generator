@@ -62,6 +62,7 @@
         <Label x:Name="Initiative_stat" Content="0" HorizontalAlignment="Left" Margin="523,72,0,0" VerticalAlignment="Top"/>
         <Label Content="Speed:" HorizontalAlignment="Left" Margin="544,72,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Speed_stat" Content="0" HorizontalAlignment="Left" Margin="602,72,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="LoadButton" Content="Load Character" HorizontalAlignment="Left" Margin="602,737,0,0" VerticalAlignment="Top" Click="LoadButton_Click"/>
 
     </Grid>
 </Window>

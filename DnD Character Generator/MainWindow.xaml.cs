@@ -1,5 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.IO;
+using System.Text.Json;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -14,6 +16,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DnD_Character_Generator.Filesave;
+using System.Diagnostics;
 
 namespace DnD_Character_Generator
 {
@@ -285,7 +289,7 @@ namespace DnD_Character_Generator
 
         private void Class_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            dndClass = Class_List.Text;
+            dndClass = (string)Class_List.SelectedItem;
             hitDie = dice.setHitDie(Class_List);
             Hitpoints.Content = hitDie;
 
@@ -295,7 +299,7 @@ namespace DnD_Character_Generator
 
         private void Race_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            race = Race_List.Text;
+            race = (string)Race_List.SelectedItem;
             currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
         }
 
@@ -325,6 +329,23 @@ namespace DnD_Character_Generator
         private void Name_TextChanged(object sender, TextChangedEventArgs e)
         {
             name = Name.Text;
+        }
+
+        private void LoadButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (openDialog.ShowDialog() == true)
+            {
+                using (Stream input = File.OpenRead(openDialog.FileName))
+                using (BinaryReader reader = new BinaryReader(input))
+                {
+                    Load character = JsonSerializer.Deserialize<Load>(reader.ReadString());
+                    Debug.WriteLine(character);
+                    currentChar = generator.loadCharacter(character);
+                    MessageBox.Show(character.charClass + " loaded from " + openDialog.FileName);
+                }
+            }
+
+            currentChar.LoadChar(Name, Class_List, Race_List, Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
         }
     }
 }

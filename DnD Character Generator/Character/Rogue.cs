@@ -16,6 +16,7 @@ class Rogue : ICharacter
     private int Charisma = 0;
     private string Race;
     private string Name;
+    private string charClass = "Rogue";
 
     public Rogue(Load character)
     {
@@ -81,6 +82,19 @@ class Rogue : ICharacter
                 break;
 
         }
+    }
+
+    public void LoadChar(TextBox Name, ComboBox charClass, ComboBox Race, Label Str, Label Dex, Label Const, Label Int, Label Wis, Label Char)
+    {
+        Name.Text = this.Name;
+        Race.SelectedItem = this.Race;
+        charClass.SelectedItem = this.charClass;
+        Str.Content = Strength;
+        Dex.Content = Dexterity;
+        Const.Content = Constitution;
+        Int.Content = Intelligence;
+        Wis.Content = Wisdom;
+        Char.Content = Charisma;
     }
 
 

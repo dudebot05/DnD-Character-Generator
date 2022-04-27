@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnD_Character_Generator.Filesave
 {
-    class Load
+    public class Load
     {
         public int strength { get; set; }
         public int dexterity { get; set; }

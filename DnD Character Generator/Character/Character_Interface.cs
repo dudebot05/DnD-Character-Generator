@@ -7,6 +7,8 @@ public interface ICharacter
 
     void InitRaceModifiers(Label Str, Label Dex, Label Const, Label Int, Label Wis, Label Char);
 
+    void LoadChar(TextBox Name, ComboBox charClass, ComboBox Race, Label Str, Label Dex, Label Const, Label Int, Label Wis, Label Char);
+
     //GenerateName(){}
 
     //GenerateSkills(){}

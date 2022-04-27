@@ -7,7 +7,7 @@ using System.Text;
 public abstract class Creator
 {
     public abstract ICharacter createCharacter(string dndclass);
-    public abstract ICharacter loadCharacter(string charClass, Load character);
+    public abstract ICharacter loadCharacter(Load character);
 }
 
 class CreateCharacter : Creator
@@ -45,9 +45,9 @@ class CreateCharacter : Creator
         }
     }
 
-    public override ICharacter loadCharacter(string charClass, Load character)
+    public override ICharacter loadCharacter(Load character)
     {
-        switch (charClass)
+        switch (character.charClass)
         {
             case "Barbarian":
                 return new Barbarian(character);
