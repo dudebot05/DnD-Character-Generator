@@ -102,6 +102,7 @@ class Bard : ICharacter
         Load save = new Load
         {
             strength = Strength,
+            dexterity = Dexterity,
             constitution = Constitution,
             intelligence = Intelligence,
             wisdom = Wisdom,

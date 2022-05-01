@@ -33,7 +33,7 @@
         <Label x:Name="Score4" Content="0" HorizontalAlignment="Left" Margin="370,180,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Score5" Content="0" HorizontalAlignment="Left" Margin="440,180,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Score6" Content="0" HorizontalAlignment="Left" Margin="510,180,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="RandomAbiliities" Content="Random" HorizontalAlignment="Left" Margin="594,183,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="RandomAbiliities" Content="Random" HorizontalAlignment="Left" Margin="594,183,0,0" VerticalAlignment="Top" Click="RandomAbiliities_Click"/>
         <ComboBox x:Name="ScoreChoice1" HorizontalAlignment="Left" Margin="142,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice1_SelectionChanged"/>
         <ComboBox x:Name="ScoreChoice2" HorizontalAlignment="Left" Margin="212,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice2_SelectionChanged"/>
         <ComboBox x:Name="ScoreChoice3" HorizontalAlignment="Left" Margin="282,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice3_SelectionChanged"/>
@@ -63,6 +63,7 @@
         <Label Content="Speed:" HorizontalAlignment="Left" Margin="544,72,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Speed_stat" Content="0" HorizontalAlignment="Left" Margin="602,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="LoadButton" Content="Load Character" HorizontalAlignment="Left" Margin="602,737,0,0" VerticalAlignment="Top" Click="LoadButton_Click"/>
+        <Button x:Name="ScoreDefault" Content="Default" HorizontalAlignment="Left" Margin="673,183,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

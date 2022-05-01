@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Eli\\.nuget\\packages\\": {}
+    "C:\\Users\\elira_7limotp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eli\\Desktop\\DnD-Character-Generator\\DnD Character Generator\\DnD Character Generator.csproj",
+      "projectUniqueName": "C:\\Users\\elira_7limotp\\OneDrive\\Desktop\\DnD Character Generator\\DnD Character Generator\\DnD Character Generator.csproj",
       "projectName": "DnD Character Generator",
-      "projectPath": "C:\\Users\\Eli\\Desktop\\DnD-Character-Generator\\DnD Character Generator\\DnD Character Generator.csproj",
-      "packagesPath": "C:\\Users\\Eli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eli\\Desktop\\DnD-Character-Generator\\DnD Character Generator\\obj\\",
+      "projectPath": "C:\\Users\\elira_7limotp\\OneDrive\\Desktop\\DnD Character Generator\\DnD Character Generator\\DnD Character Generator.csproj",
+      "packagesPath": "C:\\Users\\elira_7limotp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\elira_7limotp\\OneDrive\\Desktop\\DnD Character Generator\\DnD Character Generator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Eli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\elira_7limotp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
