@@ -20,7 +20,7 @@
         <Label Content="Hit Point Maximum: " HorizontalAlignment="Left" Margin="627,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Ability_Dice" Content="Roll Ability Dice" HorizontalAlignment="Left" Margin="31,183,0,0" VerticalAlignment="Top" Click="Ability_Dice_Click"/>
         <ComboBox x:Name="Class_List" HorizontalAlignment="Left" Margin="111,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Class_List_SelectionChanged"/>
-        <ComboBox x:Name="Race_List" HorizontalAlignment="Left" Margin="111,74,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Race_List_SelectionChanged"/>
+        <ComboBox x:Name="Race_List" HorizontalAlignment="Left" Margin="111,74,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Race_List_SelectionChanged" IsEnabled="False"/>
         <Label x:Name="Strength" Content="0" HorizontalAlignment="Left" Margin="126,223,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Dexterity" Content="0" HorizontalAlignment="Left" Margin="126,254,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Constitution" Content="0" HorizontalAlignment="Left" Margin="126,285,0,0" VerticalAlignment="Top"/>
@@ -33,14 +33,13 @@
         <Label x:Name="Score4" Content="0" HorizontalAlignment="Left" Margin="370,180,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Score5" Content="0" HorizontalAlignment="Left" Margin="440,180,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Score6" Content="0" HorizontalAlignment="Left" Margin="510,180,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="RandomAbiliities" Content="Random" HorizontalAlignment="Left" Margin="594,183,0,0" VerticalAlignment="Top" Click="RandomAbiliities_Click"/>
+        <Button x:Name="RandomAbiliities" Content="Random Abilities" HorizontalAlignment="Left" Margin="594,183,0,0" VerticalAlignment="Top" Click="RandomAbiliities_Click"/>
         <ComboBox x:Name="ScoreChoice1" HorizontalAlignment="Left" Margin="142,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice1_SelectionChanged"/>
         <ComboBox x:Name="ScoreChoice2" HorizontalAlignment="Left" Margin="212,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice2_SelectionChanged"/>
         <ComboBox x:Name="ScoreChoice3" HorizontalAlignment="Left" Margin="282,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice3_SelectionChanged"/>
         <ComboBox x:Name="ScoreChoice4" HorizontalAlignment="Left" Margin="352,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice4_SelectionChanged"/>
         <ComboBox x:Name="ScoreChoice5" HorizontalAlignment="Left" Margin="422,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice5_SelectionChanged"/>
         <ComboBox x:Name="ScoreChoice6" HorizontalAlignment="Left" Margin="492,153,0,0" VerticalAlignment="Top" Width="52" IsEnabled="False" SelectionChanged="ScoreChoice6_SelectionChanged"/>
-        <Label Content="Features and Traits" HorizontalAlignment="Left" Margin="587,432,0,0" VerticalAlignment="Top"/>
         <Label Content="+" HorizontalAlignment="Left" Margin="155,223,0,0" VerticalAlignment="Top"/>
         <Label Content="+" HorizontalAlignment="Left" Margin="155,254,0,0" VerticalAlignment="Top"/>
         <Label Content="+" HorizontalAlignment="Left" Margin="155,285,0,0" VerticalAlignment="Top"/>
@@ -56,14 +55,37 @@
         <Label x:Name="Hitpoints" Content="0" HorizontalAlignment="Left" Margin="750,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Save" Content="Save Character" HorizontalAlignment="Left" Margin="704,737,0,0" VerticalAlignment="Top" Click="Save_Click"/>
         <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="388,19,0,0" Text="Character Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Name_TextChanged"/>
-        <Label Content="Armor:" HorizontalAlignment="Left" Margin="378,72,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Armor_stat" Content="0" HorizontalAlignment="Left" Margin="432,72,0,0" VerticalAlignment="Top"/>
-        <Label Content="Initiative:" HorizontalAlignment="Left" Margin="460,72,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Initiative_stat" Content="0" HorizontalAlignment="Left" Margin="523,72,0,0" VerticalAlignment="Top"/>
         <Label Content="Speed:" HorizontalAlignment="Left" Margin="544,72,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Speed_stat" Content="0" HorizontalAlignment="Left" Margin="602,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Speed" Content="0" HorizontalAlignment="Left" Margin="602,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="LoadButton" Content="Load Character" HorizontalAlignment="Left" Margin="602,737,0,0" VerticalAlignment="Top" Click="LoadButton_Click"/>
-        <Button x:Name="ScoreDefault" Content="Default" HorizontalAlignment="Left" Margin="673,183,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ScoreDefault" Content="Default" HorizontalAlignment="Left" Margin="704,183,0,0" VerticalAlignment="Top" Click="ScoreDefault_Click"/>
+        <GroupBox Header="Features and Traits" Margin="544,420,38,69">
+            <ListView x:Name="Traits" Margin="0,0,4,0" Height="258">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+        <GroupBox Header="Equipment" Margin="277,420,305,69">
+            <ListView x:Name="Equipment" Margin="0,0,4,0" Height="258">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+        <GroupBox Header="Proficiencies and Languages" Margin="10,420,572,69">
+            <ListView x:Name="Proficiencies" Margin="0,0,4,0" Height="258">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
 
     </Grid>
 </Window>

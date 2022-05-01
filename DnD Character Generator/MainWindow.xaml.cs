@@ -149,7 +149,7 @@ namespace DnD_Character_Generator
             charCharisma = int.Parse(Charisma.Content.ToString());
 
             currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
-            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod, Speed);
         }
 
         private void ScoreChoice2_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -180,7 +180,7 @@ namespace DnD_Character_Generator
             charCharisma = int.Parse(Charisma.Content.ToString());
 
             currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
-            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod, Speed);
         }
 
         private void ScoreChoice3_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -211,7 +211,7 @@ namespace DnD_Character_Generator
             charCharisma = int.Parse(Charisma.Content.ToString());
 
             currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
-            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod, Speed);
         }
 
         private void ScoreChoice4_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -242,7 +242,7 @@ namespace DnD_Character_Generator
             charCharisma = int.Parse(Charisma.Content.ToString());
 
             currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
-            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod, Speed);
         }
 
         private void ScoreChoice5_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -273,7 +273,7 @@ namespace DnD_Character_Generator
             charCharisma = int.Parse(Charisma.Content.ToString());
 
             currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
-            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod, Speed);
         }
 
         private void ScoreChoice6_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -304,7 +304,7 @@ namespace DnD_Character_Generator
             charCharisma = int.Parse(Charisma.Content.ToString());
 
             currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
-            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod, Speed);
         }
 
         private void Class_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -316,14 +316,15 @@ namespace DnD_Character_Generator
 
             currentChar = generator.createCharacter(dndClass);
             currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
-            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod, Speed);
         }
 
         private void Race_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             race = (string)Race_List.SelectedItem;
             currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
-            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod, Speed);
+            currentChar.SetTraitsandProf(Traits, Equipment, Proficiencies);
         }
 
         private void Randomizer_Click(object sender, RoutedEventArgs e)
@@ -352,11 +353,15 @@ namespace DnD_Character_Generator
         private void Name_TextChanged(object sender, TextChangedEventArgs e)
         {
             name = Name.Text;
-            
         }
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
+            saveDialog.Filter = "DnD Files |*.dnd";
+            openDialog.Filter = "DnD Files |*.dnd";
+            saveDialog.DefaultExt = "DnD Files |*.dnd";
+            openDialog.DefaultExt = "DnD Files |*.dnd";
+
             if (openDialog.ShowDialog() == true)
             {
                 using (Stream input = File.OpenRead(openDialog.FileName))
@@ -370,8 +375,18 @@ namespace DnD_Character_Generator
             }
 
             currentChar.LoadChar(Name, Class_List, Race_List, Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
+
+            charStrength = int.Parse(Strength.Content.ToString());
+            charDexterity = int.Parse(Dexterity.Content.ToString());
+            charConstitution = int.Parse(Constitution.Content.ToString());
+            charIntelligence = int.Parse(Intelligence.Content.ToString());
+            charWisdom = int.Parse(Wisdom.Content.ToString());
+            charCharisma = int.Parse(Charisma.Content.ToString());
+
+            currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
             dice.setModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
-            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod, Speed);
+            currentChar.SetTraitsandProf(Traits, Equipment, Proficiencies);
         }
 
         private void RandomAbiliities_Click(object sender, RoutedEventArgs e)
@@ -380,7 +395,7 @@ namespace DnD_Character_Generator
             RandomAbiliities.IsEnabled = false;
 
             Score1.Visibility = Visibility.Hidden;
-            Score2s.Visibility = Visibility.Hidden;
+            Score2.Visibility = Visibility.Hidden;
             Score3.Visibility = Visibility.Hidden;
             Score4.Visibility = Visibility.Hidden;
             Score5.Visibility = Visibility.Hidden;
@@ -394,6 +409,40 @@ namespace DnD_Character_Generator
             Intelligence.Content = Scores[3];
             Wisdom.Content = Scores[4];
             Charisma.Content = Scores[5];
+
+            dice.setModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod);
+
+            charStrength = int.Parse(Strength.Content.ToString());
+            charDexterity = int.Parse(Dexterity.Content.ToString());
+            charConstitution = int.Parse(Constitution.Content.ToString());
+            charIntelligence = int.Parse(Intelligence.Content.ToString());
+            charWisdom = int.Parse(Wisdom.Content.ToString());
+            charCharisma = int.Parse(Charisma.Content.ToString());
+
+            currentChar.InitChar(race, name, charStrength, charDexterity, charConstitution, charIntelligence, charWisdom, charCharisma);
+            currentChar.InitRaceModifiers(strengthMod, dexterityMod, constitutionMod, intelligenceMod, wisdomMod, charismaMod, Speed);
+        }
+
+        private void ScoreDefault_Click(object sender, RoutedEventArgs e)
+        {
+            Ability_Dice.IsEnabled = false;
+            RandomAbiliities.IsEnabled = false;
+
+            int[] Scores = { 15, 14, 13, 12, 10, 8 };
+
+            Score1.Content = Scores[0];
+            Score2.Content = Scores[1];
+            Score3.Content = Scores[2];
+            Score4.Content = Scores[3];
+            Score5.Content = Scores[4];
+            Score6.Content = Scores[5];
+
+            ScoreChoice1.IsEnabled = true;
+            ScoreChoice2.IsEnabled = true;
+            ScoreChoice3.IsEnabled = true;
+            ScoreChoice4.IsEnabled = true;
+            ScoreChoice5.IsEnabled = true;
+            ScoreChoice6.IsEnabled = true;
         }
     }
 }

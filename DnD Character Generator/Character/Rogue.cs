@@ -44,41 +44,134 @@ class Rogue : ICharacter
         Name = name;
     }
 
-    public void InitRaceModifiers(Label Str, Label Dex, Label Const, Label Int, Label Wis, Label Char)
+    public void InitRaceModifiers(Label Str, Label Dex, Label Const, Label Int, Label Wis, Label Char, Label Speed)
     {
         switch (Race)
         {
             case "Dwarf":
                 Const.Content = int.Parse(Const.Content.ToString()) + 2;
+                Speed.Content = 25;
                 break;
             case "Elf":
                 Dex.Content = int.Parse(Dex.Content.ToString()) + 2;
+                Speed.Content = 30;
                 break;
             case "Halfling":
                 Dex.Content = int.Parse(Dex.Content.ToString()) + 2;
+                Speed.Content = 25;
                 break;
             case "Human":
                 Char.Content = int.Parse(Char.Content.ToString()) + 1;
+                Speed.Content = 30;
                 break;
             case "Dragonborn":
                 Str.Content = int.Parse(Str.Content.ToString()) + 2;
                 Char.Content = int.Parse(Char.Content.ToString()) + 1;
+                Speed.Content = 30;
                 break;
             case "Gnome":
                 Int.Content = int.Parse(Int.Content.ToString()) + 2;
+                Speed.Content = 25;
                 break;
             case "Half-Elf":
                 Char.Content = int.Parse(Char.Content.ToString()) + 2;
-                Int.Content = int.Parse(Int.Content.ToString()) + 1; //Could be a stat chosen by player
-                Wis.Content = int.Parse(Wis.Content.ToString()) + 1; //Could be a stat chosen by player
+                //Int.Content = int.Parse(Int.Content.ToString()) + 1; //Could be a stat chosen by player -- 
+                //Wis.Content = int.Parse(Wis.Content.ToString()) + 1; Program made to set to paper, info provided to user in proficiency box - Eli
+                Speed.Content = 30;
                 break;
             case "Half-Orc":
                 Str.Content = int.Parse(Str.Content.ToString()) + 2;
                 Const.Content = int.Parse(Const.Content.ToString()) + 1;
+                Speed.Content = 30;
                 break;
             case "Tiefling":
                 Int.Content = int.Parse(Int.Content.ToString()) + 1;
                 Char.Content = int.Parse(Char.Content.ToString()) + 2;
+                Speed.Content = 30;
+                break;
+
+        }
+    }
+
+    public void SetTraitsandProf(ListView traits, ListView prof, ListView equipment)
+    {
+        traits.Items.Add("Expertise");
+        traits.Items.Add("Sneak Attack");
+        traits.Items.Add("Thieves' Cant");
+        prof.Items.Add("Armor: Light armor");
+        prof.Items.Add("Weapons: Simple weapons, Hand crossbows, Longswords, Rapiers, Shortswords");
+        prof.Items.Add("Tools: Thieves' tools");
+        prof.Items.Add("Saving Throws: Dexterity, Intelligence");
+        prof.Items.Add("Skills: Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth");
+        equipment.Items.Add("(A) Rapier or (B) Shortsword");
+        equipment.Items.Add("(A) Shortbow and 20 arrows or (B) Shortsword");
+        equipment.Items.Add("(A) Burglar's pack (B) Dungeoneer's pack or (C) Explorer's pack");
+        equipment.Items.Add("Leather armor, Two Daggers, and Thieves' tools");
+        switch (Race)
+        {
+            case "Dwarf":
+                traits.Items.Add("Darkvision");
+                traits.Items.Add("Dwarven Resilience");
+                prof.Items.Add("Dwarven Combat Training");
+                prof.Items.Add("Tool Proficiency");
+                traits.Items.Add("Stonecunning");
+                prof.Items.Add("Common Language");
+                prof.Items.Add("Dwarvish Language");
+                break;
+            case "Elf":
+                traits.Items.Add("Darkvision");
+                prof.Items.Add("Keen Senses: Perception");
+                traits.Items.Add("Fey Ancestry");
+                traits.Items.Add("Trance");
+                prof.Items.Add("Common Language");
+                prof.Items.Add("Elvish Language");
+                break;
+            case "Halfling":
+                traits.Items.Add("Lucky");
+                traits.Items.Add("Brave");
+                traits.Items.Add("Halfling Nimbleness");
+                prof.Items.Add("Common Language");
+                prof.Items.Add("Halfling Language");
+                break;
+            case "Human":
+                prof.Items.Add("Common Language");
+                prof.Items.Add("'Extra' Language");
+                break;
+            case "Dragonborn":
+                traits.Items.Add("Draconic Ancestry");
+                traits.Items.Add("Breath Weapon");
+                traits.Items.Add("Damage Resistance");
+                prof.Items.Add("Common Language");
+                prof.Items.Add("Draconic Language");
+                break;
+            case "Gnome":
+                traits.Items.Add("Darkvision");
+                traits.Items.Add("Gnome Cunning");
+                prof.Items.Add("Common Language");
+                prof.Items.Add("Gnomish Language");
+                break;
+            case "Half-Elf":
+                traits.Items.Add("Darkvision");
+                traits.Items.Add("Fey Ancestry");
+                prof.Items.Add("Skill Versatility: Proficiency and +1 increase in two skills of your choice");
+                prof.Items.Add("Common Language");
+                prof.Items.Add("Elvish Language");
+                prof.Items.Add("'Extra' Language");
+                break;
+            case "Half-Orc":
+                traits.Items.Add("Darkvision");
+                prof.Items.Add("Menacing: Intimidation");
+                traits.Items.Add("Relentless Endurance");
+                traits.Items.Add("Savage Attacks");
+                prof.Items.Add("Common Language");
+                prof.Items.Add("Orc Language");
+                break;
+            case "Tiefling":
+                traits.Items.Add("Darkvision");
+                traits.Items.Add("Hellish Resistance");
+                traits.Items.Add("Infernal Legacy");
+                prof.Items.Add("Common Language");
+                prof.Items.Add("Infernal Language");
                 break;
 
         }

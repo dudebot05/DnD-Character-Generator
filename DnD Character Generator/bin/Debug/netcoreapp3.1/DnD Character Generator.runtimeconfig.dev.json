@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\elira_7limotp\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\elira_7limotp\\.nuget\\packages"
+      "C:\\Users\\Eli\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Eli\\.nuget\\packages"
     ]
   }
 }
