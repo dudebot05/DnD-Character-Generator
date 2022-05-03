@@ -330,14 +330,19 @@ namespace DnD_Character_Generator
         private void Randomizer_Click(object sender, RoutedEventArgs e)
         {
             
-            charStrength = Int32.Parse(Strength.Content.ToString());
-            charDexterity = Int32.Parse(Dexterity.Content.ToString());
-            charConstitution = Int32.Parse(Constitution.Content.ToString());
-            charIntelligence = Int32.Parse(Intelligence.Content.ToString());
-            charWisdom = Int32.Parse(Wisdom.Content.ToString());
-            charCharisma = Int32.Parse(Charisma.Content.ToString());
 
-            currentChar = generator.createCharacter(dndClass);
+            Random rnd = new Random();
+            int y = rnd.Next(12);
+            int z = rnd.Next(9);
+
+            string[] RandomClass = { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard" };
+            string[] RandomRace = { "Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling" };
+
+            Class_List.Text = RandomClass[y];
+            Race_List.Text = RandomRace[z];
+
+            RandomAbiliities_Click( sender, e);
+            Name_Button_Click(sender, e);
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -352,7 +357,7 @@ namespace DnD_Character_Generator
 
         private void Name_TextChanged(object sender, TextChangedEventArgs e)
         {
-            name = Name.Text;
+            name = NameBox.Text;
         }
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
@@ -374,7 +379,7 @@ namespace DnD_Character_Generator
                 }
             }
 
-            currentChar.LoadChar(Name, Class_List, Race_List, Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
+            currentChar.LoadChar(NameBox, Class_List, Race_List, Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma);
 
             charStrength = int.Parse(Strength.Content.ToString());
             charDexterity = int.Parse(Dexterity.Content.ToString());
@@ -443,6 +448,62 @@ namespace DnD_Character_Generator
             ScoreChoice4.IsEnabled = true;
             ScoreChoice5.IsEnabled = true;
             ScoreChoice6.IsEnabled = true;
+        }
+
+        private void Name_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Random rand = new Random();
+            string[] Dwarfnames = { "Hjalgren Stronghand", "Regdal Bigbelly", "Hardur Giantbeard", "Garmir Everforce", "Dulrik Loudbrow", "Bromduhr Keeneye" };
+            string[] Elfnames = { "Roven Thaldro", "Perren Yeshoth", "Tharen Winterspell", "Rojor Ultisk", "Cratorian Elderbell", "Belheim Merne" };
+            string[] Halflingnames = { "Arfer Stoutwhistle", "Danos Thornwillow", "Ricton Heartmeadow", "Teric Thistledancer", "Idobul Tosshand", "Zalkin Goodbottle" };
+            string[] Humannames = { "Kahrul Chosk", "Tuethe Duke", "Fadol Bloodrunner", "Relvom Tuu", "Lang Kau", "Frarth Whistlewind" };
+            string[] Dragonbornnames = { "Drithuur Calugar", "Xuatis Eragrax", "Dremres Vrakquiroth", "Keldol Shavroth", "Sheogorath Wraciar", "Uthtak Aligonth" };
+            string[] Gnomenames = { "Tokas Finefall", "Alji Wobblepot", "Arixim Bottomsweet", "Raszul Tabblenabble", "Yejin Kindhelm", "Eniros Gimblehand" };
+            string[] HalfElfnames = { "Yornan", "Xavxior", "Horizor", "Halanes", "Riword", "Belaxion" };
+            string[] HalfOrcnames = { "Drug The Filthy", "Dragon The Mutilator", "Zudson Heart Eater", "Ahrakk The Berserker", "Drakkon Head Collector", "Jadrug The Brute" };
+            string[] Tieflingnames = { "Iamira", "Horlyx", "Ozxius", "Kildons", "Skeezer", "Garomong" };
+            int x = rand.Next(7);
+
+            switch (race)
+            {
+                case "Dwarf":
+                    name = Dwarfnames[x];
+                    break;
+
+                case "Elf":
+                    name = Elfnames[x];
+                    break;
+
+                case "Halfling":
+                    name = Halflingnames[x];
+                    break;
+
+                case "Human":
+                    name = Humannames[x];
+                    break;
+
+                case "Dragonborn":
+                    name = Dragonbornnames[x];
+                    break;
+
+                case "Gnome":
+                    name = Gnomenames[x];
+                    break;
+
+                case "Half-Elf":
+                    name = HalfElfnames[x];
+                    break;
+
+                case "Half-Orc":
+                    name = HalfOrcnames[x];
+                    break;
+
+                case "Tiefling":
+                    name = Tieflingnames[x];
+                    break;
+            }
+
+            NameBox.Text = name;
         }
     }
 }

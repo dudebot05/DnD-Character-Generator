@@ -54,7 +54,6 @@
         <Label x:Name="charismaMod" Content="0" HorizontalAlignment="Left" Margin="180,378,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Hitpoints" Content="0" HorizontalAlignment="Left" Margin="750,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Save" Content="Save Character" HorizontalAlignment="Left" Margin="704,737,0,0" VerticalAlignment="Top" Click="Save_Click"/>
-        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="388,19,0,0" Text="Character Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Name_TextChanged"/>
         <Label Content="Speed:" HorizontalAlignment="Left" Margin="544,72,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Speed" Content="0" HorizontalAlignment="Left" Margin="602,72,0,0" VerticalAlignment="Top"/>
         <Button x:Name="LoadButton" Content="Load Character" HorizontalAlignment="Left" Margin="602,737,0,0" VerticalAlignment="Top" Click="LoadButton_Click"/>
@@ -86,6 +85,9 @@
                 </ListView.View>
             </ListView>
         </GroupBox>
+        <Button x:Name="Name_Button" Content="Generate Name" HorizontalAlignment="Left" Margin="478,31,0,0" VerticalAlignment="Top" Width="112" Click="Name_Button_Click"/>
+        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="16" Margin="322,33,0,0" Text="Enter a name" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+        <Label x:Name="NameLabel" Content="Label" HorizontalAlignment="Left" Height="13" Margin="322,72,0,0" VerticalAlignment="Top" Width="134"/>
 
     </Grid>
 </Window>
